@@ -1,0 +1,3 @@
+/* ASSUMPTIONS */
+
+Stock "PLNT" for the year 2015 has an opening price of 0, I have modified my code to take the first non-zero value as opening price to prevent my Greatest % Increase and Decrease from being undefined.
