@@ -45,14 +45,23 @@ def total_votes():
 
         Total = Total + 1
 
-    return "Total Votes:" + str(Total)
+    return Total
+    
+    
+total_votes = total_votes()
 
-output1 = total_votes()
+
+output1  = "Total Votes: " + str(total_votes)
 
 print(output1)
 
+with open(file2, 'w') as text:
 
-# A complete list of candidates who received votes
+    text.write(output1 + '\n')
+
+  
+
+#2 A complete list of candidates who received votes
 
 def candidate_list():
 
@@ -67,32 +76,19 @@ candidate_list()
 #print (candidate_list_unique)
 
 
-##########################################  WORK ON IMPROVING THE BELOW CODE - IT IS NOT SCALABLE   ######################################
+
+#3 and 4 Total number of votes each candidate won and percentage of votes
 
 
-# Count the number of votes and percentage of votes for each candidate
+# Empty dictionary to hold total votes for each candidate
 
-# An Empty list to store the voter ID for each candidate
+total_votes_cand = {}
 
-cand1_list = []
 
-cand2_list = []
+for i in candidate_list_unique:
 
-cand3_list = []
-
-cand4_list = []
-
-def total_votes2():
-
-    Total = 0
-
-    for _ in voter_id:
-
-        Total = Total + 1
-
-    return Total
-
-total_votes = total_votes2()
+    total_votes_cand[i] = 0  
+    
 
 with open(file, 'r') as csv_file:
 
@@ -104,106 +100,83 @@ with open(file, 'r') as csv_file:
 
     for row in csv_reader:
 
-        if row[2] == candidate_list_unique[0]:
+        total_votes_cand[row[2]] += 1  
 
-            cand1_list.append(row[0])
+def percentages():
 
-            total_cand1 = len(cand1_list)
+    with open(file2, 'a') as text:
 
-            percentage_cand1 = (total_cand1)/(total_votes) * 100
-
-        
-        elif row[2] == candidate_list_unique[1]:
-
-            cand2_list.append(row[0])
+        for i in candidate_list_unique:
     
-            total_cand2 = len(cand2_list)
+            percentage_votes = (total_votes_cand[i]/total_votes) * 100
 
-            percentage_cand2 = (total_cand2)/(total_votes) * 100
+            output_i =  str(i) + ":" + str(percentage_votes) + "%" + "(" + str(total_votes_cand[i]) + ")"
 
-    
-        elif row[2] == candidate_list_unique[2]:
+            print(output_i)
 
-            cand3_list.append(row[0])
-    
-            total_cand3 = len(cand3_list)
+            text.write(output_i + '\n')
 
-            percentage_cand3 = (total_cand3)/(total_votes) * 100
+percentages()
 
 
-        elif row[2] == candidate_list_unique[3]:
 
-            cand4_list.append(row[0])
-    
-            total_cand4 = len(cand4_list)
+#5 The winner of the election based on popular vote.
 
-            percentage_cand4 = (total_cand4)/(total_votes) * 100
 
-# Determine the winner
+# Create an empty list to hold the total votes of all candidates 
 
-    count_list = [total_cand1, total_cand2, total_cand3, total_cand4]
+total_votes_list = []
 
-    def winner():
+for row in candidate_list_unique:
+
+    total_votes_list.append(total_votes_cand[row])
+
+
+#Get the winner
+
+def winner():
 
         max_votes = 0
 
-        for value in count_list:
+        for i in range(0, len(total_votes_list)-1):
 
-            if value > max_votes:
+            if total_votes_list[i] > max_votes:
 
-                max_votes = value
+                max_votes = total_votes_list[i]
 
-                winner_index = count_list.index(max_votes)
+                winner_index = total_votes_list.index(max_votes)
 
                 winner = candidate_list_unique[winner_index]
 
         return "Winner:" + winner
 
-    winner_of_elec = winner()
+winner_of_elec = winner()
 
-    
-    # Output the results to terminal
+print(winner_of_elec)
 
-    output_cand1 = str(candidate_list_unique[0]) + ":" + str(percentage_cand1) + "%" + "(" + str(total_cand1) + ")"
+# Output to text file
 
-    output_cand2 = str(candidate_list_unique[1]) + ":" + str(percentage_cand2) + "%" + "(" + str(total_cand2) + ")"
+with open(file2, 'a') as text:
 
-    output_cand3 = str(candidate_list_unique[2]) + ":" + str(percentage_cand3) + "%" + "(" + str(total_cand3) + ")"
-
-    output_cand4 = str(candidate_list_unique[3]) + ":" + str(percentage_cand4) + "%" + "(" + str(total_cand4) + ")"
-
-    print(output_cand1)
-
-    print(output_cand2)
-
-    print(output_cand3)
-
-    print(output_cand4)
-
-    print(winner_of_elec)
-
-# Write all the required outputs to text file
+    text.write(winner_of_elec)
 
 
-with open(file2, 'w') as text:
 
-    text.write(output1 + '\n')
 
-    text.write(output_cand1 + '\n')
 
-    text.write(output_cand2 + '\n')
 
-    text.write(output_cand3 + '\n')
-
-    text.write(output_cand4 + '\n')
-
-    text.write(winner_of_elec + '\n')
 
     
 
 
-    
-    
+
+
+
+
+
+
+
+
 
 
 
