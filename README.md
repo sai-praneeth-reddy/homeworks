@@ -1,2 +1,2 @@
 # homeworks
-To submit homework's related to bootcamp
+To submit homework's related to Georgia Tech Data Science Bootcamp
