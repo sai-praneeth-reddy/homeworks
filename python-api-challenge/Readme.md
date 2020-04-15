@@ -3,9 +3,9 @@ Project Description (Happy Journey!):
 
 1.WeatherPy:
 
-- The code randomly generates a series of latitude and longitudnal values.
+- The code randomly generates a series of latitude and longitudinal values.
 
-- It then uses the citypy library to get the cities corresponding to those latitude and longitudnal values.
+- It then uses the citypy library to get the cities corresponding to those latitude and longitudinal values.
 
 - Weather API is then used to get the temprature, Humidity, Cloudiness, Wind speed corresponding to those cities.
 
@@ -22,7 +22,7 @@ Project Description (Happy Journey!):
 
 Note:
 
-In order to replicate my results in my code, avoid running the api calls.
+In order to replicate the results in my code, avoid running the api calls for weather.
 
 After importing the packages & libraries, Run the code from cell 38 in the WeatherPy.ipynb jupyter notebook.
 
