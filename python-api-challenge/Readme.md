@@ -15,9 +15,9 @@ Project Description (Happy Journey!):
 
 - The code subsets the data generated from the above steps, by only selectng cities with ideal weather conditions (i.e 70 < temp < 80, wind speed < 10%, cloudiness = 0 etc )
 
-- It then uses the Google API, to get the list of hotels that are within 5000 m radius (i.e. 3miles) of thosee cities.
+- It then uses the Google places API, to get the list of hotels that are within 5000 m radius (i.e. 3miles) of thosee cities.
 
-- The results are then plotted on a Heat Map, with weather condition along with the hotel name.
+- The results are then plotted on a goggle Heat Map, with weather condition along with the hotel name.
 
 
 Note:
