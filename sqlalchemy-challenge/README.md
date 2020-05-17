@@ -1,0 +1,1 @@
+Note: Place the programs inside the "Instructions" folder of the sqlalchamey "Homework" folder when executing.
