@@ -1,0 +1,184 @@
+<!Doctype html>
+
+<html lang="en-us">
+
+    <head>
+
+        <title>Data Dasbord</title>
+
+        <!---Importing the Bootstrap style sheet-->
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+        <!--Importing my CSS Style sheet-->
+
+        <link rel="stylesheet" href="../css/style.css">
+
+    </head>
+
+    <body>
+
+        <!--Creating the Navigation Bar using Bootstrap code-->
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+            <a class="navbar-brand" href="./Index.html">Latitude</a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" 
+            
+            aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span>
+            
+            </button>
+
+        <!--Enabling toggling to various plots using Bootstrap-->
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            
+            <ul class="nav navbar-nav mr-auto">
+
+                <li class="nav-item dropdown">
+                    
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      
+                        plots
+
+                    </a>
+
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        
+                        <a class="dropdown-item" href="./Temprature.html">Max Temperature</a>
+                        
+                        <a class="dropdown-item" href="./Humidity.html">Humidity</a>
+                        
+                        <a class="dropdown-item" href="./Cloudiness.html">Cloudiness</a>
+                        
+                        <a class="dropdown-item" href="./WindSpeed.html">Wind speed</a>
+
+                        <div class="dropdown-divider"></div>
+                        
+                        <a class="dropdown-item" href="./Index.html">Home</a>
+                      
+                    </div>
+                    
+                    </li>
+
+
+                    <li class="nav-item active">
+                        
+                        <a class="nav-link" href="./Comparison.html">Comparison <span class="sr-only">(current)</span></a>
+                                
+                    </li>
+                                
+                      <li class="nav-item">
+                        
+                        <a class="nav-link" href="./Data.html">Data</a>
+                      
+                    </li>
+            
+                    </ul>
+                                
+                  </div>
+                
+                </nav>
+
+
+                <!--Create  Bootstrap containers, assighning 7 colums for Project description class and 5 for Viaualization class -->
+
+                <div class="container">
+                    
+                    <section class="row">
+
+                        <!--Project Descrition Container-->
+      
+                        <div class="col-lg-7 col-md-12">
+          
+                            <div class="Description">
+            
+                                <h1 class="header">Cloudiness</h1>
+            
+                                <hr>
+            
+                                <img src="../images/Fig3.png" alt="Latitude vs. Cloudiness" id="other-image">
+
+            
+                                <p>
+                                    From the plot it is evident that there is very weak correlation between humidity and latitude.
+                                    There by we can conclude that latitide does not significantly impact cloudiness in cities.
+                                </p>
+          
+                            </div>
+        
+                        </div>
+
+                        <!--Visualization Container-->
+
+                        <div class="col-lg-5 col-md-12">
+                            
+                            <div class="visualization">
+                              
+                                <h2 class="Summary-header">Visualizations</h2>
+                              
+                                <hr>
+                              
+                              
+                              <div class="container">
+                    
+                                <div class="row">
+                    
+                                  <div class="col-lg-6 col-md-3">
+                                    
+                                    <a href="./Temprature.html">
+                                    
+                                        <img src="../images/Fig1.png"  alt="Latitude vs. Max Temperature" id="sub-image">
+                                    
+                                    </a>
+                                  
+                                </div>
+                              
+                                  <div class="col-lg-6 col-md-3">
+                                    <a href="./Humidity.html">
+                                    <img src="../images/Fig2.png" alt="Latitude vs. Humidity" id="sub-image">
+                                    </a>
+                                  </div>
+                              
+                                  <div class="col-lg-6 col-md-3">
+                                    <a href="./Cloudiness/.html">
+                                    <img src="../images/Fig3.png" alt="Latitude vs. Cloudiness" id="sub-image">
+                                    </a>
+                                  </div>
+                    
+                                  <div class="col-lg-6 col-md-3">
+                                    <a href="./WindSpeed.html">
+                                    <img src="../images/Fig4.png" alt="Latitude vs. Wind Speed" id="sub-image">
+                                    </a>
+                                  
+                                </div>
+                                
+                            </div>  
+                            
+                        </div>
+                            
+                            
+                    </div>
+                          
+                </div>
+                      
+            </div>  
+                    
+
+<!--Javascript Import-->
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    </body>
+
+</html>
+
+
+
+
+
